@@ -1,6 +1,15 @@
-version: '3'
+
 services:
+
   moe-counter:
-    build: .
+    image: niliaerith/moe-counter
+    container_name: moe-counter
+    hostname: moe-counter
+    restart: always
     ports:
-      - "3000:3000"
+      - 3000:3000
+    volumes:
+      - /CHANGE_PATH/moe-counter/count.db:/app/count.db
+      - /CHANGE_PATH//moe-counter/.env:/app/.env
+    environment:
+      TZ: "Asia/Shanghai"
