@@ -6,6 +6,7 @@ RUN apk add --no-cache git && \
 git clone https://github.com/journey-ad/Moe-Counter mc && \
 cd mc && \
 sed -i "s#16.x#20.x#g" package.json && \
+sed -i "s#5.13.23#8.8.3#g" package.json && \
 npm install -g yarn --force && \
 yarn install --no-cache && \
 npm cache clean --force && \
