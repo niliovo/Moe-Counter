@@ -6,7 +6,7 @@ RUN apk add --no-cache git && \
 git clone https://github.com/journey-ad/Moe-Counter mc && \
 apk cache clean
 
-FROM node:22-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
