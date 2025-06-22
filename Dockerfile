@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY --from=builder /build/mc /app
 
-RUN corepack enable && corepack prepare pnpm --activate
+RUN npm install -g pnpm --force
 
 RUN pnpm install
 
