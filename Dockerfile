@@ -16,6 +16,8 @@ RUN corepack enable && corepack prepare pnpm --activate
 
 RUN pnpm install
 
+RUN pnpm rebuild better-sqlite3
+
 EXPOSE 3000
 
 CMD ["pnpm", "start"]
