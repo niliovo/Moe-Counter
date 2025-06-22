@@ -16,6 +16,8 @@ WORKDIR /app
 
 COPY --from=builder /build/mc /app
 
+RUN npm install -g pnpm --force
+
 EXPOSE 3000
 
 CMD ["pnpm", "start"]
